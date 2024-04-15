@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Restaurant Apps by LubisMaulana, Aplikasi mencari resto terbaik!">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,400;0,600;0,700;1,600&family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,600;6..12,700;6..12,800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Quicksand:wght@400;700&family=Raleway:wght@200;700&family=Source+Code+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <title>Restaurant Apps</title>
+
+    <style>
+      *{
+        font-family: "Fira Sans", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <a tabindex="1" href="#explore" class="skip-content">
+      <p>Skip to content</p>
+    </a>
+    <header>
+      <nav class="div-nb">
+        <div class="welcome">
+          <span class="text-welcome">Restaurant Apps</span>
+        </div>
+          
+        <ul class="m-0">
+          <li class="li-nb">
+            <a style="text-decoration:none" tabindex="3" href="#home" class="li-nb1">Home</a>
+          </li>
+          <li class="li-nb">
+            <a style="text-decoration:none" tabindex="4" href="#" class="li-nb1">Favorite</a>
+          </li>
+          <li class="li-nb">
+            <a style="text-decoration:none" tabindex="5" href="https://github.com/lubismaulana" class="li-nb1">About Us</a>
+          </li>
+        </ul>
+
+        <div tabindex="2" class="menu-toggle">
+          <input type="checkbox"></input>
+          <span style="margin-bottom: 11.5px;"></span>
+          <span style="margin-bottom: 11.5px;"></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <article class="home" id="home">
+        <aside class="home-content">
+          <h1 class="home-content-text-1"><strong>Katalog Restoran</strong></h1>
+          <h2 class="home-content-text-2">Cari Restoran Terbaikmu di Restaurant Apps</h2>
+        </aside>
+      </article>
+
+      <div class="garis"></div>
+
+      <article class="explore" id="explore">
+        <div class="header-explore">
+          <h1 style="color: #2b3035;">
+            <strong>
+              &mdash; Explore Restaurant &mdash;
+            </strong>
+          </h1>
+        </div>
+        <div class="container-list-resto">
+        </div>
+      </article>
+
+      <div id="open-modal" class="modal-window">
+        <div>
+          <a href="#" title="Close" class="modal-close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+              <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+            </svg>
+          </a>
+          <h1 class="modal-name"></h1>
+          <div class="modal-head">
+            <img class="modal-img" src="" alt="">
+            <p class="modal-city"></p>
+          </div>
+          <p class="modal-rate"></p>
+          <p class="modal-desk"></p>
+        </div>
+      </div>
+      </div>
+    </main>
+    <footer>
+      <p>Coptright © 2023- <a style="text-decoration:none;" href="https://github.com/lubismaulana"> Restaurant Apps</a></p>
+    </footer>
+    <script>
+      const setModalDetail = (name, img, city, desc, rate) => {
+        document.querySelector('.modal-name').innerText = name;
+        document.querySelector('.modal-img').setAttribute('src', img);
+        document.querySelector('.modal-img').setAttribute('alt', `Foto restoran ${name}`);
+        document.querySelector('.modal-city').innerText = city;
+        document.querySelector('.modal-desk').innerText = desc;
+        document.querySelector('.modal-rate').innerText = `Rating: ${rate}`;
+      };
+    </script>
+  </body>
+</html>
